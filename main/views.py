@@ -13,7 +13,7 @@ from .models import Services, Category, Portfolio
 def services(request):
     service = Services.objects.all()
     serializers  = ServicesSerializer(service, many=True)  
-    return Response(serializers.data, status= 201)
+    return Response(serializers.data)
 
 # Portfolio section. Fetching all data
 @api_view(['GET'])
